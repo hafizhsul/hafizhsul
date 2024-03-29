@@ -23,8 +23,6 @@
 
 ###
 
-<br clear="both">
-
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="35" alt="javascript logo"  />
   <img width="12" />
@@ -50,5 +48,11 @@
 ###
 
 <img align="right" height="149" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExenFkbDZpZXc1eHBya3FuZ3cxN2QzODllYTh0ZnoyNGdzbGdsMDhiMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rjub7AIEIbXT0tzbr3/giphy.gif"  />
+
+###
+
+<div align="left">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=hafizhsul&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dark&hide_border=false&order=2" height="70" alt="languages graph"  />
+</div>
 
 ###
