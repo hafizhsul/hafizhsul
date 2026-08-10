@@ -38,5 +38,20 @@ jobs:
           COMMIT_MSG: "chore: update recent activity"
           MAX_LINES: 5
 
+      - name: Generate metrics
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: header, activity, community, repositories, metadata
+          plugin_languages: yes
+          plugin_languages_details: percentage
+          config_timezone: Asia/Jakarta
+
+      - name: Commit metrics
+        run: |
+          git add github-metrics.svg
+          git commit -m "chore: update metrics" || echo "No metrics changes"
+
       - name: Push changes
         run: git push
