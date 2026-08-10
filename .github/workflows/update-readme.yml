@@ -48,10 +48,9 @@ jobs:
           plugin_languages_details: percentage
           config_timezone: Asia/Jakarta
 
-      - name: Commit metrics
-        run: |
-          git add github-metrics.svg
-          git commit -m "chore: update metrics" || echo "No metrics changes"
-
       - name: Push changes
-        run: git push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main || true
+          git push
