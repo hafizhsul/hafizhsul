@@ -22,13 +22,20 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Commit snake svg
+      - name: Generate pacman contribution graph
+        uses: abozanona/pacman-contribution-graph@main
+        with:
+          github_user_name: hafizhsul
+          games: 'pacman'
+
+      - name: Commit snake + pacman svg
         run: |
           cp dist/github-contribution-grid-snake*.svg .
+          cp dist/pacman-contribution-graph*.svg .
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add github-contribution-grid-snake*.svg
-          git commit -m "chore: update contribution snake" || echo "No snake changes"
+          git add github-contribution-grid-snake*.svg pacman-contribution-graph*.svg
+          git commit -m "chore: update contribution snake + pacman" || echo "No snake/pacman changes"
 
       - name: Update recent activity
         uses: jamesgeorge007/github-activity-readme@master

@@ -36,14 +36,18 @@
 ###
 
 <picture data-importer="pacman">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hafizhsul/hafizhsul/pacman-output/pacman-contribution-graph-dark.svg?game=pacman">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hafizhsul/hafizhsul/pacman-output/pacman-contribution-graph.svg?game=pacman">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/hafizhsul/hafizhsul/pacman-output/pacman-contribution-graph.svg?game=pacman">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hafizhsul/hafizhsul/main/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hafizhsul/hafizhsul/main/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/hafizhsul/hafizhsul/main/pacman-contribution-graph.svg">
 </picture>
 
 ###
 
-<img data-importer="snake" src="https://raw.githubusercontent.com/hafizhsul/hafizhsul/snake-output/snake.svg" alt="Snake animation" />
+<picture data-importer="snake">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hafizhsul/hafizhsul/main/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hafizhsul/hafizhsul/main/github-contribution-grid-snake.svg">
+  <img alt="snake contribution graph" src="https://raw.githubusercontent.com/hafizhsul/hafizhsul/main/github-contribution-grid-snake.svg">
+</picture>
 
 ###
 
