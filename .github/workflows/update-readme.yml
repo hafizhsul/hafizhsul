@@ -30,6 +30,7 @@ jobs:
         with:
           github_user_name: hafizhsul
           games: 'pacman'
+          github_token: ''
 
       - name: Commit snake + pacman svg
         run: |
