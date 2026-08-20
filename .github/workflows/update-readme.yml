@@ -26,11 +26,10 @@ jobs:
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
       - name: Generate pacman contribution graph
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: hafizhsul
-          games: 'pacman'
-          github_token: ''
+        run: |
+          mkdir -p dist
+          npx --yes pacman-contribution-graph --game pacman --username hafizhsul --platform github --output dist/pacman-contribution-graph.svg
+          npx --yes pacman-contribution-graph --game pacman --username hafizhsul --platform github --gameTheme github-dark --output dist/pacman-contribution-graph-dark.svg
 
       - name: Commit snake + pacman svg
         run: |
