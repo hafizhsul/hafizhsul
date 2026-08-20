@@ -27,23 +27,14 @@ jobs:
 
       - name: Generate pacman contribution graph
         run: |
-          set +e
-          mkdir -p dist
-          npx --yes pacman-contribution-graph --game pacman --username hafizhsul --platform github --output dist/pacman-contribution-graph.svg > npx1.log 2>&1
-          rc1=$?
-          npx --yes pacman-contribution-graph --game pacman --username hafizhsul --platform github --gameTheme github-dark --output dist/pacman-contribution-graph-dark.svg > npx2.log 2>&1
-          rc2=$?
-          cat npx1.log npx2.log
-          if [ $rc1 -ne 0 ] || [ $rc2 -ne 0 ]; then
-            printf 'pacman rc1=%s rc2=%s\n' "$rc1" "$rc2" > "$GITHUB_STEP_SUMMARY"
-            tail -30 npx1.log npx2.log >> "$GITHUB_STEP_SUMMARY"
-            exit 1
-          fi
+          mkdir -p dist-pacman
+          npx --yes pacman-contribution-graph --game pacman --username hafizhsul --platform github --output dist-pacman/pacman-contribution-graph.svg
+          npx --yes pacman-contribution-graph --game pacman --username hafizhsul --platform github --gameTheme github-dark --output dist-pacman/pacman-contribution-graph-dark.svg
 
       - name: Commit snake + pacman svg
         run: |
           cp dist/github-contribution-grid-snake*.svg .
-          cp dist/pacman-contribution-graph*.svg .
+          cp dist-pacman/pacman-contribution-graph*.svg .
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add github-contribution-grid-snake*.svg pacman-contribution-graph*.svg
